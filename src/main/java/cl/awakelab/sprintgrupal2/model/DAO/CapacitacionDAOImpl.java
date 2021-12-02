@@ -103,10 +103,18 @@ public class CapacitacionDAOImpl implements ICapacitacionDAO {
 
 	@Override
 	public void delete(int id) {
-		// TODO Auto-generated method stub
+		String sql = "delete from capacitacion where id = '" + id + "'";
+		try {
+			cn = Conexion.getConn();
+			Statement stm = cn.createStatement();
+			stm.execute(sql);
+			stm.close();
+		} catch (SQLException e) {
 
+			e.printStackTrace();
+
+		}
 	}
-
 	@Override
 	public void delete(Capacitacion c) {
 		// TODO Auto-generated method stub

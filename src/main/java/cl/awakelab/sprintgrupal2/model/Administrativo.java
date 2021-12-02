@@ -4,6 +4,7 @@ import java.time.DateTimeException;
 
 public class Administrativo {
 
+    private int id;
     private String area;
     private String experiencia;
 
@@ -16,6 +17,13 @@ public class Administrativo {
     }
 
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getArea() {
         return area;

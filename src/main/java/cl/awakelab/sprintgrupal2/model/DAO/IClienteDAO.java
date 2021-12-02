@@ -10,6 +10,6 @@ public interface IClienteDAO {
     public void create(Cliente cli);
     public List<Cliente> readcli();
     public void update(Cliente cli);
-    public void delete(int idCliente);
+    public void delete(int id);
     public void delete(Cliente cli);
 }

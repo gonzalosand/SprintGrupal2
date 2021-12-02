@@ -26,6 +26,13 @@ public class ListarCliente extends HttpServlet {
     }
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int id = Integer.parseInt(request.getParameter("id"));
+
+        ClienteDAOImpl eliminarDAO = new ClienteDAOImpl();
+
+        eliminarDAO.delete(id);
+        getServletContext().getRequestDispatcher("/views/listarCliente.jsp").forward(request, response);
 
     }
+
 }

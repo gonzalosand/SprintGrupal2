@@ -2,6 +2,7 @@ package cl.awakelab.sprintgrupal2.controller;
 
 import cl.awakelab.sprintgrupal2.model.Administrativo;
 import cl.awakelab.sprintgrupal2.model.DAO.AdministrativoDAOImpl;
+import cl.awakelab.sprintgrupal2.model.DAO.ClienteDAOImpl;
 import cl.awakelab.sprintgrupal2.model.DAO.ProfesionalDAOImpl;
 import cl.awakelab.sprintgrupal2.model.Profesional;
 
@@ -26,6 +27,13 @@ public class ListarAdministrativo extends HttpServlet {
     }
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int id = Integer.parseInt(request.getParameter("id"));
+
+        AdministrativoDAOImpl eliminarDAO = new AdministrativoDAOImpl();
+
+        eliminarDAO.delete(id);
+        getServletContext().getRequestDispatcher("/views/listarAdministrativo.jsp").forward(request, response);
+
 
     }
 }

@@ -11,6 +11,6 @@ public interface IProfesionalDAO {
     public List<Profesional> readCap();
     public Profesional readOne(int idProfesional);
     public void update(Profesional p);
-    public void delete(int idProfesional);
+    public void delete(int id);
     public void delete(Profesional p);
 }

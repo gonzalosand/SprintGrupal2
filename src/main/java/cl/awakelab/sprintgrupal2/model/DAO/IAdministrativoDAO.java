@@ -9,6 +9,6 @@ public interface IAdministrativoDAO {
     public void create(Administrativo a);
     public List<Administrativo> readAdmi();
     public void update(Administrativo a);
-    public void delete(int idAdministrativo);
+    public void delete(int id);
     public void delete(Administrativo a);
 }

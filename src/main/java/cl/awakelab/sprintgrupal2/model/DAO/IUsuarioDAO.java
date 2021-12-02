@@ -10,4 +10,5 @@ public interface IUsuarioDAO {
 
     public List<Usuario> readUser();
     public void create(Usuario u);
+    public void delete(int run);
 }

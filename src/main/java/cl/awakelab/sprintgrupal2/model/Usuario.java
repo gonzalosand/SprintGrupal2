@@ -1,7 +1,7 @@
 package cl.awakelab.sprintgrupal2.model;
 
 public class Usuario {
-
+    private int id;
     private int run;
     private String nombre;
     private String fechaNac;
@@ -17,6 +17,14 @@ public class Usuario {
         this.nombre = nombre;
         this.fechaNac = fechaNac;
         this.tipo = tipo;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getRun() {

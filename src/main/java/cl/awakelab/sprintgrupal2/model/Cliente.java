@@ -2,6 +2,7 @@ package cl.awakelab.sprintgrupal2.model;
 
 public class Cliente {
 
+    private int id;
     private String nombres;
     private String apellidos;
     private String telefono;
@@ -24,6 +25,14 @@ public class Cliente {
         this.direccion = direccion;
         this.comuna = comuna;
         this.edad = edad;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNombres() {

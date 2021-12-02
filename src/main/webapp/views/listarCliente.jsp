@@ -93,6 +93,16 @@
 
 	</section>
 
+			<form action="ListarCliente" method="post">
+
+				<div class="form-group">
+					<label for="formGroupExampleInput">Ingrese id a eliminar</label>
+					<input type="number" name="id" class="form-control" id="formGroupExampleInput" placeholder="Ingrese un ID">
+				</div>
+
+				<button type="submit" name="submit" class="btn btn-primary">Eliminar</button>
+			</form>
+
 	<script
 		src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
 		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

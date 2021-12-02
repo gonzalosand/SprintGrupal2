@@ -64,10 +64,19 @@ public class ProfesionalDAOImpl implements IProfesionalDAO{
     }
 
     @Override
-    public void delete(int idProfesional) {
+    public void delete(int id) {
+        String sql = "delete from profesional where id = '" + id + "'";
+        try {
+            cn = Conexion.getConn();
+            Statement stm = cn.createStatement();
+            stm.execute(sql);
+            stm.close();
+        } catch (SQLException e) {
 
+            e.printStackTrace();
+
+        }
     }
-
     @Override
     public void delete(Profesional p) {
 

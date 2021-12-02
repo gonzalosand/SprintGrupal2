@@ -61,10 +61,19 @@ public class ClienteDAOImpl implements IClienteDAO{
     }
 
     @Override
-    public void delete(int idCliente) {
+    public void delete(int id) {
+        String sql = "delete from cliente where id = '" + id + "'";
+        try {
+            cn = Conexion.getConn();
+            Statement stm = cn.createStatement();
+            stm.execute(sql);
+            stm.close();
+        } catch (SQLException e) {
 
+            e.printStackTrace();
+
+        }
     }
-
     @Override
     public void delete(Cliente cli) {
 

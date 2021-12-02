@@ -56,4 +56,18 @@ public class UsuarioDAOImpl implements IUsuarioDAO{
         }
 
     }
+    @Override
+    public void delete(int run) {
+    String sql = "delete from usuario where run = '"+run+"'";
+		try {
+        cn = Conexion.getConn();
+        Statement stm = cn.createStatement();
+        stm.execute(sql);
+        stm.close();
+    }catch(SQLException e){
+
+        e.printStackTrace();
+
+    }
+}
 }

@@ -46,8 +46,13 @@ public class ListarUsuario extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		int run = Integer.parseInt(request.getParameter("run"));
+
+		UsuarioDAOImpl eliminarDAO = new UsuarioDAOImpl();
+
+		eliminarDAO.delete(run);
+		getServletContext().getRequestDispatcher("/views/listarUsuario.jsp").forward(request, response);
+
 	}
 
 }

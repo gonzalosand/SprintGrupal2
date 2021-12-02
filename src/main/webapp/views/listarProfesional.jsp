@@ -81,6 +81,16 @@
 
 	</section>
 
+			<form action="ListarProfesional" method="post">
+
+				<div class="form-group">
+					<label for="formGroupExampleInput">Ingrese id a eliminar</label>
+					<input type="number" name="id" class="form-control" id="formGroupExampleInput" placeholder="Ingrese un ID">
+				</div>
+
+				<button type="submit" name="submit" class="btn btn-primary">Eliminar</button>
+			</form>
+
 
 
 	<script

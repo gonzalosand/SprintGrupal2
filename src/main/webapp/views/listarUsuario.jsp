@@ -85,6 +85,16 @@
 
 	</section>
 
+			<form action="ListarUsuario" method="post">
+
+			<div class="form-group">
+				<label for="formGroupExampleInput">Ingrese RUN a eliminar</label>
+				<input type="number" name="run" class="form-control" id="formGroupExampleInput" placeholder="Ingrese un ID">
+			</div>
+
+			<button type="submit" name="submit" class="btn btn-primary">Eliminar Usuario</button>
+			</form>
+
 
 
 	<script
