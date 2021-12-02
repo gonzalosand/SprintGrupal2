@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <display-name>SprintGrupal2</display-name>
+
+
+    <!-- PARA QUE ABRA LA PAGINA "INICIO" AL PRINCIPIO-->
+    <welcome-file-list>
+        <welcome-file>Inicio</welcome-file>
+    </welcome-file-list>
+
+
+    <!-- SERVLETS -->
+    <servlet>
+        <servlet-name>Inicio</servlet-name>
+        <servlet-class>cl.awakelab.sprintgrupal2.controller.Inicio</servlet-class>
+        <async-supported>true</async-supported>
+    </servlet>
+
+    <servlet>
+        <servlet-name>CrearCapacitacion</servlet-name>
+        <servlet-class>cl.awakelab.sprintgrupal2.controller.CrearCapacitacion</servlet-class>
+        <async-supported>true</async-supported>
+    </servlet>
+
+    <servlet>
+        <servlet-name>CrearUsuario</servlet-name>
+        <servlet-class>cl.awakelab.sprintgrupal2.controller.CrearUsuario</servlet-class>
+        <async-supported>true</async-supported>
+    </servlet>
+
+    <servlet>
+        <servlet-name>Contacto</servlet-name>
+        <servlet-class>cl.awakelab.sprintgrupal2.controller.Contacto</servlet-class>
+        <async-supported>true</async-supported>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ListarCapacitacion</servlet-name>
+        <servlet-class>cl.awakelab.sprintgrupal2.controller.ListarCapacitacion</servlet-class>
+        <async-supported>true</async-supported>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ListarUsuario</servlet-name>
+        <servlet-class>cl.awakelab.sprintgrupal2.controller.ListarUsuario</servlet-class>
+        <async-supported>true</async-supported>
+    </servlet>
+
+    <servlet>
+        <servlet-name>CrearProfesional</servlet-name>
+        <servlet-class>cl.awakelab.sprintgrupal2.controller.CrearProfesional</servlet-class>
+        <async-supported>true</async-supported>
+    </servlet>
+
+    <servlet>
+        <servlet-name>Login</servlet-name>
+        <servlet-class>cl.awakelab.sprintgrupal2.controller.Login</servlet-class>
+        <async-supported>true</async-supported>
+    </servlet>
+
+    <!-- MAPPING -->
+    <servlet-mapping>
+        <servlet-name>Inicio</servlet-name>
+        <url-pattern>/controller/Inicio</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>CrearCapacitacion</servlet-name>
+        <url-pattern>/controller/CrearCapacitacion</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>CrearUsuario</servlet-name>
+        <url-pattern>/controller/CrearUsuario</url-pattern>
+    </servlet-mapping>
+
+   <servlet-mapping>
+        <servlet-name>Contacto</servlet-name>
+        <url-pattern>/controller/controller/Contacto</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ListarCapacitacion</servlet-name>
+        <url-pattern>/controller/ListarCapacitacion</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ListarUsuario</servlet-name>
+        <url-pattern>/controller/ListarUsuario</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>CrearProfesional</servlet-name>
+        <url-pattern>/controller/CrearProfesional</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>Login</servlet-name>
+        <url-pattern>/controller/Login</url-pattern>
+    </servlet-mapping>
+
+    <!-- CONFIGURACION DE SESION -->
+    <session-config>
+        <session-timeout>35</session-timeout>
+    </session-config>
+
+</web-app>
