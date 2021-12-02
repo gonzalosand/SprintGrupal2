@@ -7,7 +7,7 @@ import java.util.List;
 public interface IAdministrativoDAO {
 
     public void create(Administrativo a);
-    public List<Administrativo> readCap();
+    public List<Administrativo> readAdmi();
     public void update(Administrativo a);
     public void delete(int idAdministrativo);
     public void delete(Administrativo a);

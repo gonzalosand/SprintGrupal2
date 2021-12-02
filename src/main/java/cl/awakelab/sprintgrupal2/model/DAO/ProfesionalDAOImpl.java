@@ -4,8 +4,10 @@ import cl.awakelab.sprintgrupal2.model.Conexion;
 import cl.awakelab.sprintgrupal2.model.Profesional;
 
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ProfesionalDAOImpl implements IProfesionalDAO{
@@ -31,7 +33,24 @@ public class ProfesionalDAOImpl implements IProfesionalDAO{
 
     @Override
     public List<Profesional> readCap() {
-        return null;
+
+        String sql = "select titulo, fechaIngreso from profesional ";
+        ArrayList<Profesional> pro = new ArrayList<Profesional>();
+
+        try {
+            cn = Conexion.getConn();
+            Statement stm = cn.createStatement();
+            ResultSet rs = stm.executeQuery(sql);
+
+            while (rs.next()) {
+                pro.add(new Profesional(rs.getString("titulo"), rs.getString("fechaIngreso")));
+            }
+            stm.execute(sql);
+            stm.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return pro;
     }
 
     @Override

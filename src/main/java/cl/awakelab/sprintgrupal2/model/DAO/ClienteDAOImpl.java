@@ -2,10 +2,13 @@ package cl.awakelab.sprintgrupal2.model.DAO;
 
 import cl.awakelab.sprintgrupal2.model.Cliente;
 import cl.awakelab.sprintgrupal2.model.Conexion;
+import cl.awakelab.sprintgrupal2.model.Profesional;
 
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ClienteDAOImpl implements IClienteDAO{
@@ -34,9 +37,24 @@ public class ClienteDAOImpl implements IClienteDAO{
 
     @Override
     public List<Cliente> readcli() {
-        return null;
-    }
+        String sql = "select nombres, apellidos, telefono, afp, sistemaSalud, direccion, comuna, edad from cliente ";
+        ArrayList<Cliente> cli = new ArrayList<Cliente>();
 
+        try {
+            cn = Conexion.getConn();
+            Statement stm = cn.createStatement();
+            ResultSet rs = stm.executeQuery(sql);
+
+            while (rs.next()) {
+                cli.add(new Cliente(rs.getString("nombres"), rs.getString("apellidos"), rs.getString("telefono"), rs.getString("afp"), rs.getString("sistemaSalud"), rs.getString("direccion"), rs.getString("comuna"), rs.getInt("edad")));
+            }
+            stm.execute(sql);
+            stm.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return cli;
+    }
     @Override
     public void update(Cliente cli) {
 
