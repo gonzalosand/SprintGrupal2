@@ -26,6 +26,7 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkCapacitacion">
                     <a class="dropdown-item" href="CrearCapacitacion">Crear Capacitacion</a>
+                    <a class="dropdown-item" href="ActualizaCapacitacion">Crear Capacitacion</a>
                     <a class="dropdown-item" href="ListarCapacitacion">Listar Capacitacion</a>
                 </div>
             <li class="nav-item dropdown">
@@ -41,9 +42,12 @@
                     Tipo de usuario
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkTipo">
-                    <a class="dropdown-item" href="CrearCliente">Cliente</a>
-                    <a class="dropdown-item" href="CrearAdministrativo">Administrador</a>
-                    <a class="dropdown-item" href="CrearProfesional">Profesional</a>
+                    <a class="dropdown-item" href="CrearCliente">Crear Cliente</a>
+                    <a class="dropdown-item" href="ListarCliente">Listar Cliente</a>
+                    <a class="dropdown-item" href="CrearAdministrativo">Crear Administrador</a>
+                    <a class="dropdown-item" href="ListarAdministrativo">Listar Administrativo</a>
+                    <a class="dropdown-item" href="CrearProfesional">Crear Profesional</a>
+                    <a class="dropdown-item" href="ListarProfesional">Listar Profesional</a>
                 </div>
             <li class="nav-item active">
                 <a class="nav-link" href="Contacto">Contacto<span class="sr-only">(current)</span></a>
@@ -51,6 +55,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="Login">Login</a>
             </li>
+
         </ul>
     </div>
 </nav>
