@@ -56,7 +56,11 @@
 
   <div class="form-group">
     <label for="formGroupExampleInput">Rut cliente</label>
-    <input type="number" name="rutCliente" class="form-control" id="formGroupExampleInput" placeholder="Ingrese un rut sin digito verificador">
+    <input type="number" name="id" class="form-control" id="formGroupExampleInput" placeholder="Ingrese ID de capacitacion que desee modificar">
+  </div>
+  <div class="form-group">
+    <label for="formGroupExampleInput1">Rut cliente</label>
+    <input type="number" name="rutCliente" class="form-control" id="formGroupExampleInput1" placeholder="Ingrese un rut sin digito verificador">
   </div>
     <div class="form-group">
     <label for="formGroupExampleInput2">Dia</label>
@@ -72,7 +76,7 @@
   </div>
     <div class="form-group">
     <label for="formGroupExampleInput5">Duracion</label>
-    <input type="number" name="Duracion" class="form-control" id="formGroupExampleInput5" placeholder="">
+    <input type="number" name="duracion" class="form-control" id="formGroupExampleInput5" placeholder="">
   </div>
     <div class="form-group">
     <label for="formGroupExampleInput6">Cantidad de asistentes</label>

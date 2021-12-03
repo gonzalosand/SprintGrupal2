@@ -60,9 +60,20 @@ public class ProfesionalDAOImpl implements IProfesionalDAO{
 
     @Override
     public void update(Profesional p) {
+        String sql = "update proyecto_grupal.profesional set titulo = '" + p.getTitulo() +
+                "', fechaIngreso = '" + p.getFechaIngreso() + "' where idproductos = '"+
+                p.getId() +"'";
 
+        try {
+            cn = Conexion.getConn();
+            Statement stm = cn.createStatement();
+            stm.execute(sql);
+            stm.close();
+        } catch (SQLException e) {
+
+            e.printStackTrace();
+        }
     }
-
     @Override
     public void delete(int id) {
         String sql = "delete from profesional where id = '" + id + "'";

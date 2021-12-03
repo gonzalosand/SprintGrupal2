@@ -33,7 +33,6 @@ public class ListarProfesional extends HttpServlet {
         ProfesionalDAOImpl eliminarDAO = new ProfesionalDAOImpl();
 
         eliminarDAO.delete(id);
-        getServletContext().getRequestDispatcher("/views/listarProfesional.jsp").forward(request, response);
-
+        response.sendRedirect("ListarProfesional");
     }
 }

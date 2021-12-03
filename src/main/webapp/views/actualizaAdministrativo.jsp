@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Crear Capacitacion</title>
+<title>Actualiza Administrativo</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/formularios.css"/>
 </head>
@@ -52,34 +52,21 @@
 </nav>
 
 
-<form action="CrearCapacitacion" method="post">
+<form action="ActualizaAdministrativo" method="post">
 
   <div class="form-group">
     <label for="formGroupExampleInput">Rut cliente</label>
-    <input type="number" name="rutCliente" class="form-control" id="formGroupExampleInput" placeholder="Ingrese un rut sin digito verificador">
+    <input type="number" name="id" class="form-control" id="formGroupExampleInput" placeholder="Ingrese ID de capacitacion que desee modificar">
+  </div>
+  <div class="form-group">
+    <label for="formGroupExampleInput1">Rut cliente</label>
+    <input type="number" name="area" class="form-control" id="formGroupExampleInput1" placeholder="Ingrese el Area">
   </div>
     <div class="form-group">
     <label for="formGroupExampleInput2">Dia</label>
-    <input type="text" name="dia" class="form-control" id="formGroupExampleInput2" placeholder="Lunes a Domingo">
+    <input type="text" name="experiencia" class="form-control" id="formGroupExampleInput2" placeholder="Ingrese la experiencia">
   </div>
-    <div class="form-group">
-    <label for="formGroupExampleInput3">Hora</label>
-    <input type="text" name="hora" class="form-control" id="formGroupExampleInput3" placeholder="HH:mm">
-  </div>
-    <div class="form-group">
-    <label for="formGroupExampleInput4">Lugar</label>
-    <input type="text" name="lugar" class="form-control" id="formGroupExampleInput4" placeholder="Maximo 50 caracteres">
-  </div>
-    <div class="form-group">
-    <label for="formGroupExampleInput5">Duracion</label>
-    <input type="number" name="duracion" class="form-control" id="formGroupExampleInput5" placeholder="">
-  </div>
-    <div class="form-group">
-    <label for="formGroupExampleInput6">Cantidad de asistentes</label>
-    <input type="number" name="cantAsist" class="form-control" id="formGroupExampleInput6" placeholder="max 100 asistentes">
-  </div>
-
-    <button type="submit" name="submit" class="btn btn-primary">Crear capacitación</button>
+    <button type="submit" name="submit" class="btn btn-primary">Actualiza Capacitación</button>
 </form>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>

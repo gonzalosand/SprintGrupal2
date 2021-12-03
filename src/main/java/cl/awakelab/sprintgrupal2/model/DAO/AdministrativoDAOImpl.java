@@ -55,9 +55,20 @@ public class AdministrativoDAOImpl implements IAdministrativoDAO {
 
     @Override
     public void update(Administrativo a) {
+        String sql = "update proyecto_grupal.administrativo set area = '" + a.getArea() +
+                "', experiencia = '" + a.getExperiencia() + "' where id= '"+
+                a.getId() +"'";
 
+        try {
+            cn = Conexion.getConn();
+            Statement stm = cn.createStatement();
+            stm.execute(sql);
+            stm.close();
+        } catch (SQLException e) {
+
+            e.printStackTrace();
+        }
     }
-
     @Override
     public void delete(int id) {
         String sql = "delete from administrativo where id = '" + id + "'";

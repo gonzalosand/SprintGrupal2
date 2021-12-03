@@ -86,7 +86,7 @@ public class CapacitacionDAOImpl implements ICapacitacionDAO {
 	@Override
 	public void update(Capacitacion c) {
 		String sql= "update proyecto_grupal.capacitacion set rut_cliente = '" + c.getRutCliente() + "', dia = '" + c.getDia() + "', hora = '" + c.getHora() + "', lugar ='" + c.getLugar()
-				+ "', duracion = '" + c.getDuracion() + "', cantidad_asistentes = '" + c.getCantAsist()+"' where idproductoss = '1'";
+				+ "', duracion = '" + c.getDuracion() + "', cantidad_asistentes = '" + c.getCantAsist()+"' where id = '"+ c.getId() +"'";
 
 		try {
 			cn = Conexion.getConn();

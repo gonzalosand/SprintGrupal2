@@ -56,6 +56,25 @@ public class UsuarioDAOImpl implements IUsuarioDAO{
         }
 
     }
+
+    @Override
+    public void update(Usuario u) {
+        String sql = "update proyecto_grupal.usuario set run = '" + u.getRun() +
+                "', nombre = '" + u.getNombre() + "', fecha_nacimiento = '"+ u.getFechaNac()+ "', tipo = '" + u.getTipo() +"' where run = '"+
+                u.getRun() +"'";
+
+        try {
+            cn = Conexion.getConn();
+            Statement stm = cn.createStatement();
+            stm.execute(sql);
+            stm.close();
+        } catch (SQLException e) {
+
+            e.printStackTrace();
+        }
+    }
+
+
     @Override
     public void delete(int run) {
     String sql = "delete from usuario where run = '"+run+"'";

@@ -51,8 +51,7 @@ public class ListarUsuario extends HttpServlet {
 		UsuarioDAOImpl eliminarDAO = new UsuarioDAOImpl();
 
 		eliminarDAO.delete(run);
-		getServletContext().getRequestDispatcher("/views/listarUsuario.jsp").forward(request, response);
-
+		response.sendRedirect("ListarUsuario");
 	}
 
 }

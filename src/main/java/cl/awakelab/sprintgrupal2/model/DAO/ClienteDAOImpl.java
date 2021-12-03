@@ -57,9 +57,27 @@ public class ClienteDAOImpl implements IClienteDAO{
     }
     @Override
     public void update(Cliente cli) {
+        String sql = "update proyecto_grupal.cliente set nombres = '" + cli.getNombres() +
+                "', apellidos = '" + cli.getApellidos() +
+                "', telefono = '" + cli.getTelefono() +
+                "', afp = '" + cli.getAfp() +
+                "', sistemaSalud = '" + cli.getSistemaSalud() +
+                "', direccion = '" + cli.getDireccion() +
+                "', comuna = '" + cli.getComuna() +
+                "', edad = '" + cli.getEdad() +
+                "' where id = '"+
+                cli.getId() +"'";
 
+        try {
+            cn = Conexion.getConn();
+            Statement stm = cn.createStatement();
+            stm.execute(sql);
+            stm.close();
+        } catch (SQLException e) {
+
+            e.printStackTrace();
+        }
     }
-
     @Override
     public void delete(int id) {
         String sql = "delete from cliente where id = '" + id + "'";

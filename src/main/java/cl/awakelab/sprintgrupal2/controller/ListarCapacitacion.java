@@ -53,7 +53,7 @@ public class ListarCapacitacion extends HttpServlet {
 		CapacitacionDAOImpl eliminarDAO = new CapacitacionDAOImpl();
 
 		eliminarDAO.delete(id);
-		getServletContext().getRequestDispatcher("/views/listarCapacitacion.jsp").forward(request, response);
+		response.sendRedirect("ListarCapacitacion");
 
 	}
 

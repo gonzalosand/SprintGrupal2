@@ -25,7 +25,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkCapacitacion">
           <a class="dropdown-item" href="CrearCapacitacion">Crear Capacitacion</a>
-          <a class="dropdown-item" href="ActualizaCapacitacion">Crear Capacitacion</a>
+          <a class="dropdown-item" href="ActualizaCapacitacion">Actualiza Capacitacion</a>
           <a class="dropdown-item" href="ListarCapacitacion">Listar Capacitacion</a>
         </div>
       <li class="nav-item dropdown">

@@ -11,7 +11,13 @@ public class Administrativo {
     Administrativo() {
     }
 
-    public Administrativo( String area, String experiencia) {
+
+    public Administrativo(String area, String experiencia) {
+        this.area = area;
+        this.experiencia = experiencia;
+    }
+    public Administrativo(int id, String area, String experiencia) {
+        this.id = id;
         this.area = area;
         this.experiencia = experiencia;
     }

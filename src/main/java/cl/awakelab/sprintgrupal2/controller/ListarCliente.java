@@ -31,8 +31,7 @@ public class ListarCliente extends HttpServlet {
         ClienteDAOImpl eliminarDAO = new ClienteDAOImpl();
 
         eliminarDAO.delete(id);
-        getServletContext().getRequestDispatcher("/views/listarCliente.jsp").forward(request, response);
-
+        response.sendRedirect("ListarCliente");
     }
 
 }

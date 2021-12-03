@@ -48,7 +48,8 @@ public class ActualizaCapacitacion extends HttpServlet {
 		
 		
 		CapacitacionDAOImpl cDAO = new CapacitacionDAOImpl();
-		Capacitacion c = new Capacitacion(Integer.parseInt(request.getParameter("rutCliente")),
+		Capacitacion c = new Capacitacion(Integer.parseInt(request.getParameter("id")),
+				Integer.parseInt(request.getParameter("rutCliente")),
 				request.getParameter("dia"),
 				request.getParameter("hora"),
 				request.getParameter("lugar"),
@@ -56,7 +57,7 @@ public class ActualizaCapacitacion extends HttpServlet {
 				Integer.parseInt(request.getParameter("cantAsist")));
 		cDAO.update(c);
 
-		request.getRequestDispatcher("/views/ActualizaCapacitacion.jsp").forward(request, response);
+		response.sendRedirect("ListarCapacitacion");
 
 	}
 

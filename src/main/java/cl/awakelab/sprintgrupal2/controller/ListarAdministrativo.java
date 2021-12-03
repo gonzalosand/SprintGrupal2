@@ -32,8 +32,7 @@ public class ListarAdministrativo extends HttpServlet {
         AdministrativoDAOImpl eliminarDAO = new AdministrativoDAOImpl();
 
         eliminarDAO.delete(id);
-        getServletContext().getRequestDispatcher("/views/listarAdministrativo.jsp").forward(request, response);
-
+        response.sendRedirect("ListarAdministrativo");
 
     }
 }
