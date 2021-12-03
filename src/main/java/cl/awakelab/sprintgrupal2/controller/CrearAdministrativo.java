@@ -23,7 +23,6 @@ public class CrearAdministrativo extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         AdministrativoDAOImpl aDAO = new AdministrativoDAOImpl();
-        //String nombres, String apellidos, String telefono, String afp, String sistemaSalud, String direccion, String comuna, int edad
         Administrativo a = new Administrativo(request.getParameter("area"),
                 request.getParameter("experiencia"));
 
