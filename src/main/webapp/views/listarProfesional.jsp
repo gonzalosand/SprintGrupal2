@@ -56,6 +56,9 @@
 			<li class="nav-item">
 				<a class="nav-link" href="Login">Login</a>
 			</li>
+		</ul>
+	</div>
+</nav>
 
 
 	<section>

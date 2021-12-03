@@ -48,7 +48,11 @@
       <li class="nav-item">
         <a class="nav-link" href="Login">Login</a>
       </li>
- <form>
+    </ul>
+  </div>
+</nav>
+
+<form>
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="inputname">Nombre</label>
