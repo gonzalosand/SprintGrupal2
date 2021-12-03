@@ -5,10 +5,11 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Crear Usuario</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/formularios.css"/>
 </head>
 <body>
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="Inicio">Inicio</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,6 +23,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkCapacitacion">
           <a class="dropdown-item" href="CrearCapacitacion">Crear Capacitacion</a>
+          <a class="dropdown-item" href="ActualizaCapacitacion">Crear Capacitacion</a>
           <a class="dropdown-item" href="ListarCapacitacion">Listar Capacitacion</a>
         </div>
       <li class="nav-item dropdown">
@@ -37,9 +39,12 @@
           Tipo de usuario
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkTipo">
-          <a class="dropdown-item" href="CrearCliente">Cliente</a>
-          <a class="dropdown-item" href="CrearAdministrativo">Administrador</a>
-          <a class="dropdown-item" href="CrearProfesional">Profesional</a>
+          <a class="dropdown-item" href="CrearCliente">Crear Cliente</a>
+          <a class="dropdown-item" href="ListarCliente">Listar Cliente</a>
+          <a class="dropdown-item" href="CrearAdministrativo">Crear Administrador</a>
+          <a class="dropdown-item" href="ListarAdministrativo">Listar Administrativo</a>
+          <a class="dropdown-item" href="CrearProfesional">Crear Profesional</a>
+          <a class="dropdown-item" href="ListarProfesional">Listar Profesional</a>
         </div>
       <li class="nav-item active">
         <a class="nav-link" href="Contacto">Contacto<span class="sr-only">(current)</span></a>
@@ -47,10 +52,10 @@
       <li class="nav-item">
         <a class="nav-link" href="Login">Login</a>
       </li>
+
     </ul>
   </div>
 </nav>
-
   <div class="container">
 <form action="CrearUsuario" method="post">
 
@@ -81,7 +86,6 @@
 </form>
   </div>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 </body>
 </html>
