@@ -63,7 +63,6 @@
 
 
 <section>
-
 		<table class="table">
 			<thead class="table-dark">
 				<tr>
