@@ -16,6 +16,18 @@ public class Cliente {
 
     }
 
+    public Cliente(int id, String nombres, String apellidos, String telefono, String afp, String sistemaSalud, String direccion, String comuna, int edad) {
+        this.id = id;
+        this.nombres = nombres;
+        this.apellidos = apellidos;
+        this.telefono = telefono;
+        this.afp = afp;
+        this.sistemaSalud = sistemaSalud;
+        this.direccion = direccion;
+        this.comuna = comuna;
+        this.edad = edad;
+    }
+
     public Cliente(String nombres, String apellidos, String telefono, String afp, String sistemaSalud, String direccion, String comuna, int edad) {
         this.nombres = nombres;
         this.apellidos = apellidos;

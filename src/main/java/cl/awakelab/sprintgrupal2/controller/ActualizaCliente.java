@@ -1,6 +1,12 @@
 package cl.awakelab.sprintgrupal2.controller;
 
+
+
+import cl.awakelab.sprintgrupal2.model.Cliente;
+import cl.awakelab.sprintgrupal2.model.DAO.ClienteDAOImpl;
+import cl.awakelab.sprintgrupal2.model.DAO.ProfesionalDAOImpl;
 import cl.awakelab.sprintgrupal2.model.DAO.UsuarioDAOImpl;
+import cl.awakelab.sprintgrupal2.model.Profesional;
 import cl.awakelab.sprintgrupal2.model.Usuario;
 
 import javax.servlet.ServletException;
@@ -10,15 +16,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-
-@WebServlet("/CrearUsuario")
-public class CrearUsuario extends HttpServlet {
+/**
+ * Servlet implementation class CrearCapacitacion
+ */
+@WebServlet("/ActualizaCliente")
+public class ActualizaCliente extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public CrearUsuario() {
+	public ActualizaCliente() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -30,7 +38,9 @@ public class CrearUsuario extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		getServletContext().getRequestDispatcher("/views/crearUsuario.jsp").forward(request, response);
+
+
+		getServletContext().getRequestDispatcher("/views/actualizaProfesional.jsp").forward(request, response);
 	}
 
 	/**
@@ -40,28 +50,17 @@ public class CrearUsuario extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		String tipo = request.getParameter("tipo");
-		/*UsuarioDAOImpl uDAO = new UsuarioDAOImpl();
-		Usuario u = new Usuario(Integer.parseInt(request.getParameter("run")),
-				request.getParameter("nombre"),
-				request.getParameter("fechaNac"),
-				request.getParameter("tipo"));
+		ClienteDAOImpl clienteDAO = new ClienteDAOImpl();
+		Cliente cli = new Cliente(Integer.parseInt(request.getParameter("id")),
+				request.getParameter("nombres"),
+				request.getParameter("apellidos"),request.getParameter("telefono"),
+				request.getParameter("afp"),request.getParameter("sistemaSalud"),
+				request.getParameter("direccion"),request.getParameter("comuna"),
+				Integer.parseInt(request.getParameter("edad")));
 
+		clienteDAO.update(cli);
 
-
-		uDAO.create(u);
-
-*/
-	if(tipo.equalsIgnoreCase("administrativo")){
-		getServletContext().getRequestDispatcher("/views/crearAdministrativo.jsp").forward(request, response);
-
-	}if(tipo.equalsIgnoreCase("profesional")){
-			getServletContext().getRequestDispatcher("/views/crearProfesional.jsp").forward(request, response);
-
-		}if(tipo.equalsIgnoreCase( "cliente")) {
-			getServletContext().getRequestDispatcher("/views/crearCliente.jsp").forward(request, response);
-
-		}
+		response.sendRedirect("ListarCliente");
 
 	}
 

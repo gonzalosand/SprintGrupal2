@@ -66,16 +66,24 @@
     <label for="formGroupExampleInput3">Fecha de nacimiento</label>
     <input type="text" name="fechaNac" class="form-control" id="formGroupExampleInput3" placeholder="AA/MM/DD">
   </div>
+  </div>
+  <!--
+  <div class="form-group">
+    <label for="formGroupExampleInput4">tipo de usuario</label>
+    <input type="text" name="tipo" class="form-control" id="formGroupExampleInput4" placeholder="Administrador, CLiente o Profesional">
+  </div> -->
+
     <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" name="tipo" data-bs-toggle="dropdown" aria-expanded="false">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
             Tipo de usuario
         </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li><a class="dropdown-item" >Administrativo</a></li>
-            <li><a class="dropdown-item" >Cliente</a></li>
+        <ul class="dropdown-menu"  aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" value="tipo">Administrativo</a></li>
+            <li><a class="dropdown-item" value="tipo">Cliente</a></li>
             <li><a class="dropdown-item" >Profesional</a></li>
         </ul>
     </div>
+
 
     <button type="submit" name="submit" class="btn btn-primary">Crear Usuario</button>
 </form>

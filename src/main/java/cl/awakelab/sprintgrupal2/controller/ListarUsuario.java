@@ -52,6 +52,7 @@ public class ListarUsuario extends HttpServlet {
 
 		eliminarDAO.delete(run);
 		response.sendRedirect("ListarUsuario");
+
 	}
 
 }
